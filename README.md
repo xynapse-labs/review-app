@@ -62,12 +62,24 @@ frontend/
 
 ### Backend
 
+macOS/Linux:
+
 ```bash
 cd backend
 python3 -m venv venv
 ./venv/bin/pip install -r requirements.txt
 ./venv/bin/python -m app.seed        # (re)creates the DB with demo data
 ./venv/bin/uvicorn app.main:app --reload --port 8000
+```
+
+Windows (PowerShell):
+
+```powershell
+cd backend
+py -m venv venv
+.\venv\Scripts\pip install -r requirements.txt
+.\venv\Scripts\python -m app.seed
+.\venv\Scripts\uvicorn app.main:app --reload --port 8000
 ```
 
 The API runs at `http://localhost:8000` (interactive docs at `/docs`).
